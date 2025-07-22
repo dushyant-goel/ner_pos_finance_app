@@ -1,8 +1,8 @@
 matplotlib
-nltk
+nltk==3.9.1
 numpy
 pandas
-scikit-learn
+scikit-learn>=1.6.0
 sklearn-crfsuite
 streamlit
 datasets

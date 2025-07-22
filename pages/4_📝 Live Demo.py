@@ -55,10 +55,6 @@ y_pred = crf.predict(X_test)
 labels = list(crf.classes_)
 labels.remove('O')  # Remove 'O' from labels for evaluation
 
-# Evaluate the model
-accuracy = sklearn_crfsuite.metrics.flat_accuracy_score(y_test, y_pred)
-# print(f'Accuracy: {accuracy}\n')
-
 import itertools 
 y_test_flat = list(itertools.chain.from_iterable(y_test))
 y_pred_flat = list(itertools.chain.from_iterable(y_pred))
@@ -66,10 +62,6 @@ y_pred_flat = list(itertools.chain.from_iterable(y_pred))
 from sklearn.metrics import classification_report
 report = classification_report(y_test_flat, y_pred_flat, labels=labels)
 # print(report)
-
-# Evaluate the model
-accuracy = sklearn_crfsuite.metrics.flat_accuracy_score(y_test, y_pred)
-# print(f'Accuracy: {accuracy}\n')
 
 # --- Convert report to df for display ---
 from io import StringIO
