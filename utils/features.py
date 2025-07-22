@@ -1,5 +1,8 @@
 import string
+import nltk
 from nltk.stem import PorterStemmer, WordNetLemmatizer
+
+nltk.download('wordnet')
 
 stemmer = PorterStemmer()
 lemmatizer = WordNetLemmatizer()
