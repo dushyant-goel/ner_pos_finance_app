@@ -32,18 +32,19 @@ Some well-known gold standard treebank are:
 """)
 
 st.markdown(r"""
-| Treebank Name       | Description |
-|---------------------|-------------|
-| **Penn Treebank (PTB)** | The most widely used treebank in English NLP. Introduced in the 1990s. Uses ~50,000 sentence from WSJ |
-| **Universal Dependencies (UD)** | A modern, multilingual POS + dependency grammar project. |
-| **Brown Corpus**    | One of the earliest corpora, used in NLTK. Simpler tagset. |
-| **OntoNotes**       | Used in CoNLL shared tasks. Rich with POS, coreference, and semantics. |
+| Treebank Name                     | Description                                                                                           |
+|---------------------              |-------------                                                                                          |
+| **Penn Treebank (PTB)**           | The most widely used treebank in English NLP. Introduced in the 1990s. Uses ~50,000 sentence from WSJ |
+| **Universal Dependencies (UD)**   | A modern, multilingual POS + dependency grammar project.                                              |
+| **Brown Corpus**                  | One of the earliest corpora, used in NLTK. Simpler tagset.                                            |
+| **OntoNotes**                     | Used in CoNLL shared tasks. Rich with POS, coreference, and semantics.                                |
 """)
 
 st.image("assets/penn_treebank.png", caption="A sentence from the Penn Treebank with POS and phrase structure annotations")
 
+"---"
 
-st.subheader("🔧 How are POS Taggers Built?")
+st.subheader("🔧 How are POS Taggers Models Trained?")
 
 st.markdown(r"""
 POS taggers are trained on these treebanks using various methods:
@@ -65,8 +66,13 @@ st.markdown(r"""
 Models routinely achieve 97% accuracy for English corpus. These pretrained models are made
 also freely and publically available along with training parameter details to download with
 NLP Libraries such as NLTK and spaCy.
-            
-#### 🧰 Libraries Commonly Used
+""")
+
+"---"
+
+st.subheader(""" 🧰 Libraries Commonly Used """)
+
+st.markdown(r"""
 
 Several NLP libraries provide ready-to-use POS taggers:
 

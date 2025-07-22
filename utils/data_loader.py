@@ -1,13 +1,12 @@
+import streamlit as st
+
 # Utilities to load CoNLL-format data
+@st.cache_data
 def load_conll_data(filepath):
     sentences = []
     current = []
     
     with open(filepath, 'r', encoding='utf-8') as f:
-
-        # Skip the header
-        # DOCSTART- -X- O O 
-        next(f) 
 
         for line in f:
             if line.strip() == "": # Reset current sentence on empty line

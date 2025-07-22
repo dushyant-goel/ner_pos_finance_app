@@ -1,5 +1,3 @@
--DOCSTART- -X- O O
-
 Subordinated NNP - O
 Loan NNP - O
 Agreement NNP - O

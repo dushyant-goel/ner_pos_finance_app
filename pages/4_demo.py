@@ -7,6 +7,13 @@ from sklearn_crfsuite import metrics
 
 st.header("🧠 Conditional Random Fields (CRF) for Named Entity Recognition")
 
+st.subheader(r"""
+We follow the approach used by Alvarado (2015) of using  mixed training sets for niche domains.
+The model is trained on CoNLL-2003 data which is POS tagged Reuters newswire data. We divide the 
+financial documents data from 8 SEC filling into two parts - first 3 documents supplment the training
+and the last 5 are used to evaluate and test.           
+""")
+
 # --- Load training and test data ---
 train_sents = load_conll_data("data/conll_data_train.txt")
 test_sents = load_conll_data("data/conll_data_test.txt")
