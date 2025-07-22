@@ -5,7 +5,7 @@ import pandas as pd
 
 import sklearn_crfsuite
 
-st.header("🧠 Conditional Random Fields (CRF) for Named Entity Recognition")
+st.header("🧠 Live Demo: CRF for Named Entity Recognition")
 
 st.markdown(r"""
 We follow the approach used by **[Alvarado (2015)](https://aclanthology.org/U15-1010.pdf)** of using  mixed training sets for niche domains.

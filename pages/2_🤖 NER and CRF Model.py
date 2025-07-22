@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.subheader("🔍 Named Entity Recognition with CRFs")
+st.header("🔍 Named Entity Recognition with CRFs")
 st.markdown(r"""
 Extracting named entities (like **Barclays**, **New York**, or **credit support annex**) is a fundamental task in NLP — especially important in **financial documents** where even misidentified entity can cause downstream errors.
 We want to extract these entities then to track relations between them, to summarize the information about the identified entity or to find the sentiment 
