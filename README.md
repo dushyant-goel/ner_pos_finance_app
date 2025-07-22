@@ -1,11 +1,11 @@
 # 🧠 Named Entity Recognition (NER) and POS Tagging: A Streamlit Tutorial App
 
 This interactive Streamlit app is both a **tutorial** and a **live demo** for understanding and experimenting with **Part-of-Speech (POS) Tagging** 
-and **Named Entity Recognition (NER)** using Conditional Random Fields (CRFs).
+and **Named Entity Recognition (NER)** using **Conditional Random Fields (CRFs)**.
 
 ## 🧪 Demo
 
-▶️ [Launch the App on Streamlit Cloud](https://ner-pos-finance-app.streamlit.app/)
+▶️ [App Demo](https://ner-pos-finance-app.streamlit.app/)
 
 ---
 
@@ -23,8 +23,8 @@ and **Named Entity Recognition (NER)** using Conditional Random Fields (CRFs).
 The app is organized into pages for clarity:
 
 1. **📖 Theory** – Understand what POS tagging and NER are, why they matter, and how CRFs help.
-2. ** 📖 Part of Speech Tagging** - Explore POS Trees and demystify the trained libraries available like NLTK.
-3. ** 📖 Named Entity Recognition** - Uncover the intution and maths behind **Conditional Random Fields** and how it compares
+2. **📖 Part of Speech Tagging** - Explore POS Trees and demystify the trained libraries available like NLTK.
+3. **📖 Named Entity Recognition** - Uncover the intution and maths behind **Conditional Random Fields** and how it compares
   to other NER training methods.
 4. **Corpus Exploration** - Explanation of data used.
 5. **📝 Live Demo** – Enter a sentence and get back predicted POS tags and named entities. Including:
