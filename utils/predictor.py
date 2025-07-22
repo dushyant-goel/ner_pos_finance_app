@@ -4,10 +4,12 @@ from utils.features import sent2features
 from sklearn_crfsuite import CRF
 
 def tokenize_and_tag(text):
-    nltk.download('punkt', quiet=True)
-    nltk.download('averaged_perceptron_tagger', quiet=True)
+    nltk.download('punkt', quiet=True, download_dir='nltk_data_dir')
+    nltk.download('averaged_perceptron_tagger', quiet=True, download_dir='nltk_data_dir')
+    
     tokens = word_tokenize(text)
     tagged = pos_tag(tokens)
+    
     # Convert to dummy NER-tag format expected: (word, POS, _)
     return [(word, pos, "O") for word, pos in tagged]
 
