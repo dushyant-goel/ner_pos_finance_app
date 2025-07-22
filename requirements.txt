@@ -1,7 +1,7 @@
-streamlit
+matplotlib
+nltk
+numpy
+pandas
 scikit-learn
 sklearn-crfsuite
-nltk
-pandas
-matplotlib
-numpy
+streamlit

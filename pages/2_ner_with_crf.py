@@ -134,6 +134,6 @@ st.markdown(r"""
 - **CRF** is the sweet spot — it supports **sequence awareness** *and* **handcrafted features**
 
 That's why it has been a go-to choice for NER tasks before deep learning took over — and still performs very well when trained on domain-specific data.
-CRF training and inference is also lots less computationally expensive than deep learning tasks. Specifically, if we use it for a nich - such as financial documents
-it performs very well.
+CRF training and inference is also lots less computationally expensive than deep learning tasks. 
+Specifically, if we use it for a niche - such as financial documents it performs very well.
 """)

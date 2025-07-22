@@ -52,7 +52,7 @@ import pandas as pd
 
 st.subheader("🔍 Training Data")
 
-conll_sentences = load_conll_data("data/conll_data_train.txt")
+conll_sentences = load_conll_data("data/conll_sec_data_train.txt")
 
 # Show just the first 2 sentences
 for i, sent in enumerate(conll_sentences[:2]):
