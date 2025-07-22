@@ -1,2 +1,7 @@
 */__pycache__/*
 *.ipynb
+
+models/*
+nltk_data_dir/*
+
+.DS_Store
