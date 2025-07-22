@@ -39,8 +39,6 @@ crf = sklearn_crfsuite.CRF(
     max_iterations=100,
     all_possible_transitions=True,
 )
-
-
 crf.fit(X_train, y_train)
 st.success("CRF model trained successfully!")
 

@@ -1,6 +1,7 @@
 import streamlit as st
 
-st.header("🧠 Part-of-Speech (POS) Tagging")
+st.set_page_config(page_title="Part of Speech Tagging")
+st.title("🧠 Part-of-Speech (POS) Tagging")
 
 st.markdown(r"""
 Remember those **syntax trees** exercise from English lectures in middle school? We drew lines  

@@ -2,6 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="POS Tagging & NER")
 st.title("🔎 Part-of-Speech Tagging and Named Entity Recognition")
+
 st.markdown(r"""
 Welcome! This app demonstrates **Named Entity Recognition (NER)** and **Part-of-Speech (POS)** tagging.
 You will learn how these NLP tools work with theory and interactive tools, taking an example from a corpus of financial agreements.""")
