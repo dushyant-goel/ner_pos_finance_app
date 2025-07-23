@@ -50,10 +50,10 @@ Accessed: Jul. 22, 2025. [Online]. Available: http://www.sec.gov/Archives/edgar/
 ## 💻 Run Locally
 
 ```bash
-git clone https://github.com/yourusername/ner-pos-tutorial.git
-cd ner-pos-tutorial
+git clone https://github.com/dushyant-goel/ner_pos_finance_app/
+cd ner_pos_finance_app
 pip install -r requirements.txt
-streamlit run Home.py
+streamlit run app.py
 ```
 
 ---
