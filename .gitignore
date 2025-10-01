@@ -1,4 +1,4 @@
-*/__pycache__/*
+__pycache__/
 *.ipynb
 
 models/*
@@ -6,3 +6,4 @@ nltk_data_dir/*
 
 .DS_Store
 
+utils/__pycache__/data_loader.cpython-312.pyc
