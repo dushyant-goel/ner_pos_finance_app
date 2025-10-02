@@ -9,12 +9,11 @@ nltk.download('averaged_perceptron_tagger')
 nltk.download('averaged_perceptron_tagger_eng')
 
 # Debugging averaged_perceptron_tagger_eng issue
-import os
-nltk_dir = os.path.expanduser('~/nltk_data/taggers/')
-st.write(os.listdir(nltk_dir))
-exists = os.path.isdir(nltk_dir)
-st.write(f"{nltk_dir} {exists}")
-
+# import os
+# nltk_dir = os.path.expanduser('~/nltk_data/taggers/')
+# st.write(os.listdir(nltk_dir))
+# exists = os.path.isdir(nltk_dir)
+# st.write(f"{nltk_dir} {exists}")
 
 # Define the pages
 main_page = st.Page('pages/main_page.py', title='🔎 Part-of-Speech Tagging and Named Entity Recognition')
