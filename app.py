@@ -2,10 +2,11 @@ import streamlit as st
 import nltk
 
 # Setup NLTK
-nltk.download('wordnet')
-nltk.download('punkt')
-nltk.download('punkt_tab')
-nltk.download('averaged_perceptron_tagger')
+nltk.download()
+# nltk.download('punkt')
+# nltk.download('punkt_tab')
+# nltk.download('averaged_perceptron_tagger')
+# nltk.download('averaged_preceptron_tagger_eng')
 
 # Define the pages
 main_page = st.Page('pages/main_page.py', title='🔎 Part-of-Speech Tagging and Named Entity Recognition')
