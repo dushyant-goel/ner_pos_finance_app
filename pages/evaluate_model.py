@@ -14,8 +14,9 @@ from utils.predictor import predict_on_test_data
 
 test_sents = load_conll_data("data/conll_sec_data_test.txt")
 
-X_test = [sent2features(s) for s in test_sents]
-y_test = [sent2labels(s) for s in test_sents]
+with st.spinner('Loading test data...'):
+    X_test = [sent2features(s) for s in test_sents]
+    y_test = [sent2labels(s) for s in test_sents]
 
 if 'model' in st.session_state:
     crf = st.session_state['model']
