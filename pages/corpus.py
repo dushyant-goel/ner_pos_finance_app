@@ -1,8 +1,8 @@
 import streamlit as st
 
 import pandas as pd
-from utils.data_loader import load_conll_data
-
+# Note: this function is cached
+from utils.data_loader import load_conll_data 
 
 st.subheader("📌 Dataset: Financial Agreements NER Corpus")
 

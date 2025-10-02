@@ -1,8 +1,9 @@
 import streamlit as st
 
 # Utilities to load CoNLL-format data
+# Runs once per user session
 
-@st.cache_data
+@st.cache_resource
 def load_conll_data(filepath):
     sentences = []
     current = []
