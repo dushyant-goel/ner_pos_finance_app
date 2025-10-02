@@ -1,5 +1,9 @@
 import streamlit as st
 
+import pandas as pd
+from utils.data_loader import load_conll_data
+
+
 st.subheader("📌 Dataset: Financial Agreements NER Corpus")
 
 st.markdown(r"""
@@ -47,9 +51,6 @@ This POS/NER tagged data is a serves as the training set for the **ML model** we
 
 "---"
 
-from utils.data_loader import load_conll_data
-import pandas as pd
-
 st.subheader("🔍 Training Data")
 
 conll_sentences = load_conll_data("data/conll_sec_data_train.txt")
@@ -67,5 +68,5 @@ You'll notice:
 improve NER performance. To train the model, the input uses the same features as defined in section 2.
 """)
 
-"---"
+
 

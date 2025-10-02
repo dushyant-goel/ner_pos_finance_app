@@ -1,6 +1,8 @@
 import streamlit as st
 
 # Utilities to load CoNLL-format data
+
+@st.cache_data
 def load_conll_data(filepath):
     sentences = []
     current = []

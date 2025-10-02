@@ -4,7 +4,7 @@ st.set_page_config(page_title="Part of Speech Tagging")
 st.title("🧠 Part-of-Speech (POS) Tagging")
 
 st.markdown(r"""
-Remember those **syntax trees** exercise from English lectures in middle school? We drew lines  
+Remember those **syntax trees** exercises from English lectures in middle school? We drew lines  
 sentence to break it down into constituent parts. First we would break the sentence into subject 
 (noun phrase) and predicate (verb phrase), and then iteratively break these into determiners, adjective, 
 adverbs, etc. The end results looked like an upside down tree, with words at the leaves, each labeled 
@@ -16,7 +16,7 @@ Here's a short explainer video to jog your memory:
 st.video("https://youtu.be/CeuhQ3s-Jss?si=uTSqnLbuLStY96En&t=188", start_time="188s")
 
 st.markdown(r"""
-This exercise is the foundation of POS tagging. Various universties painstakingly created
+This exercise is the foundation of POS tagging. Various universities painstakingly created
 and made available massive human hand-annotated (or atleast, human-verified) dataset called 
 Treebanks. 
 """)

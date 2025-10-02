@@ -1,11 +1,10 @@
-import nltk
+import streamlit as st
+
 from nltk import word_tokenize, pos_tag
 from utils.features import sent2features
-from sklearn_crfsuite import CRF
 
+@st.cache_data
 def tokenize_and_tag(text):
-    nltk.download('punkt', quiet=True, download_dir='nltk_data_dir')
-    nltk.download('averaged_perceptron_tagger', quiet=True, download_dir='nltk_data_dir')
     
     tokens = word_tokenize(text)
     tagged = pos_tag(tokens)

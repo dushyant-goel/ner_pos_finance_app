@@ -1,18 +1,13 @@
-import string
-import nltk
-import os
+import streamlit as st
+
 from nltk.stem import PorterStemmer, WordNetLemmatizer
+import string
 
-
-nltk_data_dir = os.path.join(os.getcwd(), 'nltk_data')
-os.makedirs(nltk_data_dir, exist_ok=True)
-nltk.data.path.append(nltk_data_dir)
-
-nltk.download('wordnet', download_dir='nltk_data_dir')
 
 stemmer = PorterStemmer()
 lemmatizer = WordNetLemmatizer()
 
+@st.cache_data
 def word_shape(word):
     return ''.join(
         'X' if c.isupper() else
@@ -21,6 +16,7 @@ def word_shape(word):
         '#' for c in word
     )
 
+@st.cache_data
 def word2features(sent, i):
     word, postag = sent[i][0], sent[i][1]
     return {
@@ -42,11 +38,14 @@ def word2features(sent, i):
         'suffix2': word[-2:]
     }
 
+@st.cache_data
 def sent2features(sent):
     return [word2features(sent, i) for i in range(len(sent))]
 
+@st.cache_data
 def sent2labels(sent):
     return [label for token, postag, label in sent]
 
+@st.cache_data
 def sent2tokens(sent):
     return [token for token, postag, label in sent]

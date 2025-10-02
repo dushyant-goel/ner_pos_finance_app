@@ -1,16 +1,25 @@
 import streamlit as st
+
 from utils.data_loader import load_conll_data
 from utils.features import sent2features, sent2labels, sent2tokens
-import pandas as pd
+from utils.predictor import prepare_features
 
+
+import pandas as pd
 import sklearn_crfsuite
+from sklearn.metrics import classification_report
+
+import joblib
+import itertools 
+from io import StringIO
+
 
 st.header("🧠 Live Demo: CRF for Named Entity Recognition")
 
 st.markdown(r"""
 We follow the approach used by **[Alvarado (2015)](https://aclanthology.org/U15-1010.pdf)** of using  mixed training sets for niche domains.
 The model is trained on CoNLL-2003 data which is POS tagged Reuters newswire data. We divide the 
-financial documents data from 8 SEC filling into two parts - first 3 documents supplment the training
+financial documents data from 8 SEC filling into two parts - first 3 documents supplement the training
 and the last 5 are used to evaluate and test.           
 """)
 
@@ -40,11 +49,11 @@ crf = sklearn_crfsuite.CRF(
     all_possible_transitions=True,
 )
 crf.fit(X_train, y_train)
+
 st.success("CRF model trained successfully!")
 
 # --- Save the model ---
 
-import joblib
 joblib.dump(crf, "models/crf_model.pkl")
 
 # --- Evaluate model ---
@@ -55,16 +64,13 @@ y_pred = crf.predict(X_test)
 labels = list(crf.classes_)
 labels.remove('O')  # Remove 'O' from labels for evaluation
 
-import itertools 
 y_test_flat = list(itertools.chain.from_iterable(y_test))
 y_pred_flat = list(itertools.chain.from_iterable(y_pred))
 
-from sklearn.metrics import classification_report
 report = classification_report(y_test_flat, y_pred_flat, labels=labels)
 # print(report)
 
 # --- Convert report to df for display ---
-from io import StringIO
 
 # Read using fixed-width format
 df_report = pd.read_fwf(StringIO(report), index_col=0)
@@ -103,7 +109,6 @@ st.dataframe(df)
 
 "---"
 
-from utils.predictor import prepare_features
 st.subheader("🧾 Predict Named Entities in Your Financial Document")
 
 st.markdown("""

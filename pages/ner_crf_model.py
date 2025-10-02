@@ -7,19 +7,19 @@ We want to extract these entities then to track relations between them, to summa
 about the entitiy in the documents.
 
 Why not use manual rules to identify entities? Manual identification will ensure that we do not miss out on edge cases and that the identified entities are
-indeed correct, as no ML or NLP method can garuntee 100% accuracy.
+indeed correct, as no ML or NLP method can guarantee 100% accuracy.
             
 One could try to write **manual rules** ("If a word is capitalized, it might be a person or company"), or use **dictionaries** of known names — but this approach breaks down:
 - New entities appear constantly (e.g., new companies, people)
 - Context matters: "Apple" could be a fruit or a company
-- Rules are brittle and hard to maintain - and diffcult to generalize.
+- Rules are brittle and hard to maintain - and difficult to generalize.
 
 Other automated methods to identify entities (after POS tagging) include **Naive Bayes / Logistic Regression** and **Hidden Markov Models (HMM), however each has their limitations.**
 Logistic Regression tags each word independently, missing out context from words around the entity.
 HMM does not consider rich features listed below which we use to richly annotate the data to improve extraction.
 
 So instead, we use **Conditional Random Fields (CRFs)** — a machine learning model specifically designed to handle **structured sequence prediction**, 
-like tagging each POS identified word in a sentence with the right entity label. We can incorportate arbritary rules - such as alphabet capitalizations but also 
+like tagging each POS identified word in a sentence with the right entity label. We can incorporate arbitrary rules - such as alphabet capitalizations but also 
 more bespoke rules or sequence of tags after which they appear, word order, character and number sequence, etc.
 """)
 
