@@ -4,6 +4,7 @@ import nltk
 # Setup NLTK
 nltk.download('wordnet')
 nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('averaged_perceptron_tagger')
 
 # Define the pages
